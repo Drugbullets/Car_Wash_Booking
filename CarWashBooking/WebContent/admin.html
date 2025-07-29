@@ -1,0 +1,8 @@
+<%@ page session="true" %>
+<%
+    if (session.getAttribute("admin") == null) {
+        response.sendRedirect("login.jsp");
+        return;
+    }
+%>
+<iframe src="viewBookings" width="100%" height="600px" style="border:none;"></iframe>
